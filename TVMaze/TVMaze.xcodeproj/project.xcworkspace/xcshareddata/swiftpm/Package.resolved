@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "miniservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Arbigaus/MiniService",
+      "state" : {
+        "branch" : "main",
+        "revision" : "235e874893345a7b4fa227a5ed9341899cd1e4dd"
+      }
+    }
+  ],
+  "version" : 2
+}
