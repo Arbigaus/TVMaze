@@ -27,7 +27,6 @@ struct ShowsView: View {
         NavigationView {
             List {
                 ForEach(viewModel.shows) { show in
-
                     NavigationLink(destination: DetailView()) {
                         HStack(spacing: 4) {
                             ImageView(imageUrl: show.image?.medium ?? "")
@@ -42,13 +41,7 @@ struct ShowsView: View {
                                 Spacer()
                                 HStack {
                                     ForEach(show.genres ?? [], id: \.self) { genre in
-                                        Text(genre)
-                                            .font(.caption)
-                                            .padding(4)
-                                            .background(
-                                                RoundedRectangle(cornerRadius: 4)
-                                                    .foregroundColor(Color(genre))
-                                            )
+                                        Tag(genre: genre)
                                     }
                                 }
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -85,6 +78,20 @@ struct ShowsView: View {
                 .frame(maxWidth: .infinity)
         }
         .padding()
+    }
+
+    private struct Tag: View {
+        let genre: String
+
+        var body: some View {
+            Text(genre)
+                .font(.caption)
+                .padding(4)
+                .background(
+                    RoundedRectangle(cornerRadius: 4)
+                        .foregroundColor(Color(genre))
+                )
+        }
     }
 }
 
