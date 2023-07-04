@@ -25,6 +25,7 @@
 		D77CD1372A53BAC300A758DE /* tvShows.json in Resources */ = {isa = PBXBuildFile; fileRef = D77CD1362A53BAC300A758DE /* tvShows.json */; };
 		D77CD1392A53BADA00A758DE /* TVShowMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77CD1382A53BADA00A758DE /* TVShowMockData.swift */; };
 		D77CD13B2A53BCA200A758DE /* tvShows.json in Sources */ = {isa = PBXBuildFile; fileRef = D77CD1362A53BAC300A758DE /* tvShows.json */; };
+		D7F1A1D02A54B12500F878F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F1A1CF2A54B12500F878F7 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D77CD1362A53BAC300A758DE /* tvShows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tvShows.json; sourceTree = "<group>"; };
 		D77CD1382A53BADA00A758DE /* TVShowMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowMockData.swift; sourceTree = "<group>"; };
 		D77CD13A2A53BBE600A758DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D7F1A1CF2A54B12500F878F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,9 +194,9 @@
 		D77CD1342A53BA9900A758DE /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D7F1A1D32A54B3F700F878F7 /* Assets */,
 				D77CD0F52A53A8CD00A758DE /* TVMazeApp.swift */,
 				D77CD0F72A53A8CD00A758DE /* ContentView.swift */,
-				D77CD0F92A53A8CF00A758DE /* Assets.xcassets */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -205,6 +207,15 @@
 				D77CD1362A53BAC300A758DE /* tvShows.json */,
 			);
 			path = Files;
+			sourceTree = "<group>";
+		};
+		D7F1A1D32A54B3F700F878F7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D77CD0F92A53A8CF00A758DE /* Assets.xcassets */,
+				D7F1A1CF2A54B12500F878F7 /* Colors.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77CD0FD2A53A8CF00A758DE /* Preview Assets.xcassets in Resources */,
+				D7F1A1D02A54B12500F878F7 /* Colors.xcassets in Resources */,
 				D77CD1372A53BAC300A758DE /* tvShows.json in Resources */,
 				D77CD0FA2A53A8CF00A758DE /* Assets.xcassets in Resources */,
 			);

@@ -14,45 +14,65 @@ struct ShowsView: View {
         self.viewModel = viewModel
     }
 
+    struct DetailView: View {
+        var body: some View {
+            VStack {
+                Text("Detail View")
+            }
+            .navigationTitle("Detail")
+        }
+    }
+
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.shows) { show in
-                    HStack(spacing: 4) {
-                        ImageView(imageUrl: show.image?.medium ?? "")
-                            .frame(height: 120)
-                            .cornerRadius(8)
-                        VStack(alignment: .leading) {
-                            Text(show.name ?? "")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                            Text(show.language ?? "")
-                                .font(.subheadline)
-                            Spacer()
-                            ForEach(show.genres ?? [], id: \.self) { genre in
+
+                    NavigationLink(destination: DetailView()) {
+                        HStack(spacing: 4) {
+                            ImageView(imageUrl: show.image?.medium ?? "")
+                                .frame(height: 120)
+                                .cornerRadius(8)
+                            VStack(alignment: .leading) {
+                                Text(show.name ?? "")
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                Text(show.language ?? "")
+                                    .font(.subheadline)
+                                Spacer()
                                 HStack {
-                                    Text(genre)
-                                        .font(.caption)
+                                    ForEach(show.genres ?? [], id: \.self) { genre in
+                                        Text(genre)
+                                            .font(.caption)
+                                            .padding(4)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 4)
+                                                    .foregroundColor(Color(genre))
+                                            )
+                                    }
                                 }
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             }
-                            .background(.red)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(8)
                         }
-                        .background(.blue)
-                        .padding(8)
-                    }
-                    .listRowInsets(EdgeInsets())
-                    .background(.green)
-                    .task {
-                        if self.viewModel.shows.isLast(show) {
-                            await self.viewModel.fetchShows()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .task {
+                            if self.viewModel.shows.isLast(show) {
+                                await self.viewModel.fetchShows()
+                            }
                         }
                     }
-                }
-                if viewModel.isLoading {
-                    loadingRow
+
+                    if viewModel.isLoading {
+                        loadingRow
+                    }
                 }
             }
             .navigationTitle("TV Shows")
+            .listStyle(PlainListStyle())
+            .listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
             .task {
                 await viewModel.fetchShows()
             }
@@ -62,6 +82,7 @@ struct ShowsView: View {
     private var loadingRow: some View {
         VStack(alignment: .center, spacing: 12) {
             ProgressView()
+                .frame(maxWidth: .infinity)
         }
         .padding()
     }
