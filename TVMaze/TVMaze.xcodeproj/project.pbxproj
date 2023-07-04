@@ -26,6 +26,7 @@
 		D77CD1392A53BADA00A758DE /* TVShowMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77CD1382A53BADA00A758DE /* TVShowMockData.swift */; };
 		D77CD13B2A53BCA200A758DE /* tvShows.json in Sources */ = {isa = PBXBuildFile; fileRef = D77CD1362A53BAC300A758DE /* tvShows.json */; };
 		D7F1A1D02A54B12500F878F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F1A1CF2A54B12500F878F7 /* Colors.xcassets */; };
+		D7F1A1D52A54BB8100F878F7 /* ShowsView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1D42A54BB8100F878F7 /* ShowsView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D77CD1382A53BADA00A758DE /* TVShowMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowMockData.swift; sourceTree = "<group>"; };
 		D77CD13A2A53BBE600A758DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7F1A1CF2A54B12500F878F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D7F1A1D42A54BB8100F878F7 /* ShowsView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowsView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				D77CD1282A53B03300A758DE /* ShowsView.swift */,
 				D77CD12C2A53B6BE00A758DE /* ShowViewModel.swift */,
+				D7F1A1D42A54BB8100F878F7 /* ShowsView+Extensions.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				D77CD1302A53B79F00A758DE /* Array+Extensions.swift in Sources */,
 				D77CD0F62A53A8CD00A758DE /* TVMazeApp.swift in Sources */,
 				D77CD12D2A53B6BE00A758DE /* ShowViewModel.swift in Sources */,
+				D7F1A1D52A54BB8100F878F7 /* ShowsView+Extensions.swift in Sources */,
 				D77CD1392A53BADA00A758DE /* TVShowMockData.swift in Sources */,
 				D77CD1332A53B7D500A758DE /* ImageView.swift in Sources */,
 				D77CD12B2A53B43500A758DE /* View+Extensions.swift in Sources */,
