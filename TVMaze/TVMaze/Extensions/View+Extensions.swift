@@ -19,22 +19,9 @@ public extension View {
      */
     @ViewBuilder func isLoading(_ condition: Bool) -> some View {
         if condition {
-            loadingView
+            LoadingRow()
         } else {
             self
         }
-    }
-
-    private var loadingView: some View {
-        VStack(alignment: .center, spacing: 12) {
-            ProgressView() {
-                Text("Loading")
-                    .font(.system(.title3, design: .rounded))
-            }
-        }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white)
-        .edgesIgnoringSafeArea(.all)
     }
 }

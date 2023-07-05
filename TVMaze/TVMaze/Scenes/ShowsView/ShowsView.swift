@@ -15,20 +15,11 @@ struct ShowsView: View {
         self.viewModel = viewModel
     }
 
-    struct DetailView: View {
-        var body: some View {
-            VStack {
-                Text("Detail View")
-            }
-            .navigationTitle("Detail")
-        }
-    }
-
     var body: some View {
         NavigationStack {
             List {
                 ForEach(viewModel.shows) { show in
-                    NavigationLink(destination: DetailView()) {
+                    NavigationLink(destination: DetailView(show: show)) {
                         ShowCard(show: show)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .task {
@@ -37,12 +28,10 @@ struct ShowsView: View {
                                 }
                             }
                     }
-
-                    if viewModel.isLoading {
-                        loadingRow
-                    }
                 }
-
+                if viewModel.isLoading {
+                    LoadingRow()
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -62,14 +51,6 @@ struct ShowsView: View {
                 await viewModel.fetchShows()
             }
         }
-    }
-
-    private var loadingRow: some View {
-        VStack(alignment: .center, spacing: 12) {
-            ProgressView()
-                .frame(maxWidth: .infinity)
-        }
-        .padding()
     }
 }
 
