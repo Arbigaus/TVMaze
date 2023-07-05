@@ -9,9 +9,9 @@ import Foundation
 
 struct TVShow: Decodable, Identifiable {
     let id: Int
-    let url: String?
-    let name: String?
-    let type: String?
+    let url: String
+    let name: String
+    let type: String
     let language: String?
     let genres: [String]?
     let status: String?

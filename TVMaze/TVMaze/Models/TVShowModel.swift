@@ -28,4 +28,14 @@ final class TVShowModel: TVShowModelProtocol {
             throw error
         }
     }
+
+    func searchShow(by name: String) async throws -> [TVShow] {
+        do {
+            let endpoint = "search/shows?q=\(name)"
+            let response: [TVShowSearch] = try await service.get(endpoint: endpoint)
+            return response.map { $0.show }
+        } catch (let error) {
+            throw error
+        }
+    }
 }
