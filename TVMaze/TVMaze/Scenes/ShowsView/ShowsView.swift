@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShowsView: View {
     @ObservedObject private var viewModel: ShowViewModel
+    @State private var isSearchActive = false
 
     init(viewModel: ShowViewModel = ShowViewModel()) {
         self.viewModel = viewModel
@@ -24,21 +25,32 @@ struct ShowsView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(viewModel.shows) { show in
                     NavigationLink(destination: DetailView()) {
-                        Card(show: show)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .task {
-                            if self.viewModel.shows.isLast(show) {
-                                await self.viewModel.fetchShows()
+                        ShowCard(show: show)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .task {
+                                if self.viewModel.shows.isLast(show) {
+                                    await self.viewModel.fetchShows()
+                                }
                             }
-                        }
                     }
 
                     if viewModel.isLoading {
                         loadingRow
+                    }
+                }
+
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        SearchView()
+
+                    } label: {
+                        Image(systemName: "magnifyingglass")
                     }
                 }
             }
