@@ -7,30 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "58B5A28C-5C5A-42E2-BF92-B83B649CD1FC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "../../../Library/Developer/Xcode/DerivedData/TVMaze-cdipmbeqtwaitvhdzubfvrysxfob/SourcePackages/checkouts/MiniService/Sources/MiniService/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "createURLRequest(_:method:body:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "po url">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2F902FA8-5092-4F02-8F95-F4AD541A705E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -74,6 +50,243 @@
                   </ActionContent>
                </BreakpointActionProxy>
             </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECA5CEA2-D209-4176-B37E-35DA36962B02"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TVMaze/Scenes/DetailView/DetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchSeasonsList()"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po &quot;fetchSeasonsList&quot;">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C8C9BDC-2ED6-4214-BD48-5FAD18104EA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TVMaze/Scenes/DetailView/DetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "fetchEpisodesListBySeason(seasons:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po seasons[0]">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "5C8C9BDC-2ED6-4214-BD48-5FAD18104EA8 - b0becba6a3df6bad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TVMaze.DetailViewModel.fetchEpisodesListBySeason(seasons: Swift.Array&lt;TVMaze.TVShowSeason&gt;) async throws -&gt; ()"
+                  moduleName = "TVMaze"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TVMaze/TVMaze/TVMaze/Scenes/DetailView/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "888">
+               </Location>
+               <Location
+                  uuid = "5C8C9BDC-2ED6-4214-BD48-5FAD18104EA8 - ff9f41704e3597af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TVMaze.DetailViewModel.fetchEpisodesListBySeason(seasons: Swift.Array&lt;TVMaze.TVShowSeason&gt;) async throws -&gt; ()"
+                  moduleName = "TVMaze"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TVMaze/TVMaze/TVMaze/Scenes/DetailView/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1341">
+               </Location>
+               <Location
+                  uuid = "5C8C9BDC-2ED6-4214-BD48-5FAD18104EA8 - 66ef82193bd971a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TVMaze.DetailViewModel.fetchEpisodesListBySeason(seasons: Swift.Array&lt;TVMaze.TVShowSeason&gt;) async throws -&gt; ()"
+                  moduleName = "TVMaze"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TVMaze/TVMaze/TVMaze/Scenes/DetailView/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1358">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEAE5092-C8EF-4036-B6D4-5EB8CE994FF7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TVMaze/Models/TVShowModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "fetchSeasons(from:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po &quot;Endpoint -&gt; \(endpoint)&quot;">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "AEAE5092-C8EF-4036-B6D4-5EB8CE994FF7 - 42554cd84ed8fd3a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TVMaze.TVShowModel.fetchSeasons(from: Swift.Int) async throws -&gt; Swift.Array&lt;TVMaze.TVShowSeason&gt;"
+                  moduleName = "TVMaze"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TVMaze/TVMaze/TVMaze/Models/TVShowModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "433">
+               </Location>
+               <Location
+                  uuid = "AEAE5092-C8EF-4036-B6D4-5EB8CE994FF7 - 71575f3ff849517d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TVMaze.TVShowModel.fetchSeasons(from: Swift.Int) async throws -&gt; Swift.Array&lt;TVMaze.TVShowSeason&gt;"
+                  moduleName = "TVMaze"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TVMaze/TVMaze/TVMaze/Models/TVShowModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  uuid = "AEAE5092-C8EF-4036-B6D4-5EB8CE994FF7 - 41a81e0167bbd38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TVMaze.TVShowModel.fetchSeasons(from: Swift.Int) async throws -&gt; Swift.Array&lt;TVMaze.TVShowSeason&gt;"
+                  moduleName = "TVMaze"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TVMaze/TVMaze/TVMaze/Models/TVShowModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "119">
+               </Location>
+               <Location
+                  uuid = "AEAE5092-C8EF-4036-B6D4-5EB8CE994FF7 - ab3b209fc24b1d37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TVMaze.TVShowModel.fetchSeasons(from: Swift.Int) async throws -&gt; Swift.Array&lt;TVMaze.TVShowSeason&gt;"
+                  moduleName = "TVMaze"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TVMaze/TVMaze/TVMaze/Models/TVShowModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "94">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8217928-BCB8-4EC2-8CD2-39E6455046B8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TVMaze/Scenes/DetailView/DetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setLoadingValue(with:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po &quot;setLoadingValue -&gt; \(value)&quot;">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "D8217928-BCB8-4EC2-8CD2-39E6455046B8 - a1599e538db01397"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TVMaze.DetailViewModel.setLoadingValue(with: Swift.Bool) -&gt; ()"
+                  moduleName = "TVMaze"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TVMaze/TVMaze/TVMaze/Scenes/DetailView/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "D8217928-BCB8-4EC2-8CD2-39E6455046B8 - a52076baf2d58ecc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in TVMaze.DetailViewModel.setLoadingValue(with: Swift.Bool) -&gt; ()"
+                  moduleName = "TVMaze"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arbigaus/Projects/TVMaze/TVMaze/TVMaze/Scenes/DetailView/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

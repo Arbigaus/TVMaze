@@ -25,6 +25,7 @@
 		D77CD1372A53BAC300A758DE /* tvShows.json in Resources */ = {isa = PBXBuildFile; fileRef = D77CD1362A53BAC300A758DE /* tvShows.json */; };
 		D77CD1392A53BADA00A758DE /* TVShowMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77CD1382A53BADA00A758DE /* TVShowMockData.swift */; };
 		D77CD13B2A53BCA200A758DE /* tvShows.json in Sources */ = {isa = PBXBuildFile; fileRef = D77CD1362A53BAC300A758DE /* tvShows.json */; };
+		D7C0CCD12A574BD300D68192 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C0CCD02A574BD200D68192 /* String+Extensions.swift */; };
 		D7F1A1D02A54B12500F878F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F1A1CF2A54B12500F878F7 /* Colors.xcassets */; };
 		D7F1A1DC2A54EDF600F878F7 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1DB2A54EDF600F878F7 /* SearchView.swift */; };
 		D7F1A1DE2A54EE3500F878F7 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1DD2A54EE3500F878F7 /* SearchViewModel.swift */; };
@@ -32,6 +33,9 @@
 		D7F1A1E22A54F75800F878F7 /* ShowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1E12A54F75800F878F7 /* ShowCard.swift */; };
 		D7F1A1E52A54F91E00F878F7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1E42A54F91E00F878F7 /* DetailView.swift */; };
 		D7F1A1E72A54FB6D00F878F7 /* LoadingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1E62A54FB6D00F878F7 /* LoadingRow.swift */; };
+		D7F1A1E92A5501E300F878F7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1E82A5501E300F878F7 /* DetailViewModel.swift */; };
+		D7F1A1EB2A55034F00F878F7 /* TVShowEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1EA2A55034F00F878F7 /* TVShowEpisode.swift */; };
+		D7F1A1ED2A55085900F878F7 /* TVShowSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1EC2A55085900F878F7 /* TVShowSeason.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,7 @@
 		D77CD1362A53BAC300A758DE /* tvShows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tvShows.json; sourceTree = "<group>"; };
 		D77CD1382A53BADA00A758DE /* TVShowMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowMockData.swift; sourceTree = "<group>"; };
 		D77CD13A2A53BBE600A758DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D7C0CCD02A574BD200D68192 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		D7F1A1CF2A54B12500F878F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D7F1A1DB2A54EDF600F878F7 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D7F1A1DD2A54EE3500F878F7 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -79,6 +84,9 @@
 		D7F1A1E12A54F75800F878F7 /* ShowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCard.swift; sourceTree = "<group>"; };
 		D7F1A1E42A54F91E00F878F7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D7F1A1E62A54FB6D00F878F7 /* LoadingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRow.swift; sourceTree = "<group>"; };
+		D7F1A1E82A5501E300F878F7 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		D7F1A1EA2A55034F00F878F7 /* TVShowEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowEpisode.swift; sourceTree = "<group>"; };
+		D7F1A1EC2A55085900F878F7 /* TVShowSeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowSeason.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +182,8 @@
 				D77CD1232A53AE8200A758DE /* TVShow.swift */,
 				D77CD1252A53AEB100A758DE /* TVShowModel.swift */,
 				D7F1A1DF2A54F51000F878F7 /* TVShowSearch.swift */,
+				D7F1A1EA2A55034F00F878F7 /* TVShowEpisode.swift */,
+				D7F1A1EC2A55085900F878F7 /* TVShowSeason.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +203,7 @@
 			children = (
 				D77CD12A2A53B43500A758DE /* View+Extensions.swift */,
 				D77CD12F2A53B79F00A758DE /* Array+Extensions.swift */,
+				D7C0CCD02A574BD200D68192 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				D7F1A1E42A54F91E00F878F7 /* DetailView.swift */,
+				D7F1A1E82A5501E300F878F7 /* DetailViewModel.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -398,6 +410,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F1A1EB2A55034F00F878F7 /* TVShowEpisode.swift in Sources */,
+				D7C0CCD12A574BD300D68192 /* String+Extensions.swift in Sources */,
+				D7F1A1ED2A55085900F878F7 /* TVShowSeason.swift in Sources */,
 				D77CD13B2A53BCA200A758DE /* tvShows.json in Sources */,
 				D77CD1262A53AEB100A758DE /* TVShowModel.swift in Sources */,
 				D77CD1292A53B03300A758DE /* ShowsView.swift in Sources */,
@@ -411,6 +426,7 @@
 				D7F1A1E52A54F91E00F878F7 /* DetailView.swift in Sources */,
 				D7F1A1DC2A54EDF600F878F7 /* SearchView.swift in Sources */,
 				D77CD1392A53BADA00A758DE /* TVShowMockData.swift in Sources */,
+				D7F1A1E92A5501E300F878F7 /* DetailViewModel.swift in Sources */,
 				D77CD1332A53B7D500A758DE /* ImageView.swift in Sources */,
 				D7F1A1E02A54F51000F878F7 /* TVShowSearch.swift in Sources */,
 				D77CD12B2A53B43500A758DE /* View+Extensions.swift in Sources */,

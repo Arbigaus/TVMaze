@@ -11,7 +11,7 @@ final class SearchViewModel: ObservableObject {
     @Published var shows = [TVShow]()
     @Published var isLoading = false
 
-    let tvShowModel = TVShowModel()
+    lazy var tvShowModel: TVShowModelProtocol = TVShowModel()
 
     func searchShows(by name: String) async throws {
         guard !isLoading else { return }

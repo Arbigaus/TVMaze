@@ -11,16 +11,19 @@ struct ImageView: View {
     let imageUrl: String
 
     var body: some View {
-        if let url = URL(string: imageUrl),
-           let imageData = try? Data(contentsOf: url),
-           let uiImage = UIImage(data: imageData) {
-            Image(uiImage: uiImage)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-        } else {
-            Text("Failed to load image")
+        if let url = URL(string: imageUrl) {
+            AsyncImage(url: url) { image in
+                image
+                    .resizable()
+            } placeholder: {
+                LoadingRow()
+            }
+            .aspectRatio(contentMode: .fit)
+            .clipped()
         }
     }
+
+    
 }
 
 struct ImageView_Previews: PreviewProvider {

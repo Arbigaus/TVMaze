@@ -8,10 +8,48 @@
 import SwiftUI
 
 struct DetailView: View {
-    let show: TVShow
+    @ObservedObject private var viewModel: DetailViewModel
+
+    init(viewModel: DetailViewModel) {
+        self.viewModel = viewModel
+    }
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ShowCard(show: viewModel.show)
+
+            if let summary = viewModel.show.summary {
+                Text("Summary")
+                    .font(.title2)
+                    .bold()
+                    .padding(.top)
+                    .padding(.bottom, 4)
+
+                Text(summary.removingHTMLTags())
+                    .font(.body)
+            }
+
+            ForEach(viewModel.seasons) { season in
+                Section("Season \(season.number)") {
+                    ForEach(season.episodes ?? []) { episode in
+                        Text("Episode \(episode.number ?? 0): \(episode.name)")
+                            .font(.body)
+                    }
+                }
+                .padding()
+            }
+
+            if viewModel.isLoading {
+                LoadingRow()
+            }
+        }
+        .task {
+            try? await viewModel.fetchSeasonsList()
+        }
+        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+        .navigationTitle(viewModel.show.name)
+        .listRowBackground(Color.clear)
+        .frame(maxWidth: .infinity)
     }
 }
 
@@ -20,3 +58,4 @@ struct DetailView: View {
 //        DetailView()
 //    }
 //}
+

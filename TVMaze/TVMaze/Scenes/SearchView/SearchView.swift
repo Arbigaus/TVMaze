@@ -16,7 +16,7 @@ struct SearchView: View {
     var body: some View {
         List {
             ForEach(viewModel.shows) { show in
-                NavigationLink(destination: DetailView(show: show)) {
+                NavigationLink(destination: DetailView(viewModel: DetailViewModel(show: show))) {
                     ShowCard(show: show)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }

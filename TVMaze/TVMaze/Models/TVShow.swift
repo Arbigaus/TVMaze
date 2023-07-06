@@ -92,3 +92,45 @@ struct TVShow: Decodable, Identifiable {
         }
     }
 }
+
+extension TVShow: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(url)
+        hasher.combine(name)
+        hasher.combine(type)
+        hasher.combine(language)
+        hasher.combine(genres)
+        hasher.combine(status)
+        hasher.combine(runtime)
+        hasher.combine(averageRuntime)
+        hasher.combine(premiered)
+        hasher.combine(ended)
+        hasher.combine(officialSite)
+        hasher.combine(weight)
+        hasher.combine(dvdCountry)
+        hasher.combine(summary)
+        hasher.combine(updated)
+    }
+}
+
+extension TVShow: Equatable {
+    static func ==(lhs: TVShow, rhs: TVShow) -> Bool {
+        return lhs.id == rhs.id &&
+        lhs.url == rhs.url &&
+        lhs.name == rhs.name &&
+        lhs.type == rhs.type &&
+        lhs.language == rhs.language &&
+        lhs.genres == rhs.genres &&
+        lhs.status == rhs.status &&
+        lhs.runtime == rhs.runtime &&
+        lhs.averageRuntime == rhs.averageRuntime &&
+        lhs.premiered == rhs.premiered &&
+        lhs.ended == rhs.ended &&
+        lhs.officialSite == rhs.officialSite &&
+        lhs.weight == rhs.weight &&
+        lhs.dvdCountry == rhs.dvdCountry &&
+        lhs.summary == rhs.summary &&
+        lhs.updated == rhs.updated
+    }
+}

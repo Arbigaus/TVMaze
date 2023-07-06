@@ -10,6 +10,10 @@ import MiniService
 
 protocol TVShowModelProtocol {
     func fetchShowsInPage(_ page: Int) async throws -> [TVShow]
+    func searchShow(by name: String) async throws -> [TVShow]
+    func fetchEpisodes(from showId: Int) async throws -> [TVShowEpisode]
+    func fetchSeasons(from showId: Int) async throws -> [TVShowSeason]
+    func fetchEpisodeBySeason(from seasonId: Int) async throws -> [TVShowEpisode] 
 }
 
 final class TVShowModel: TVShowModelProtocol {
@@ -34,6 +38,36 @@ final class TVShowModel: TVShowModelProtocol {
             let endpoint = "search/shows?q=\(name)"
             let response: [TVShowSearch] = try await service.get(endpoint: endpoint)
             return response.map { $0.show }
+        } catch (let error) {
+            throw error
+        }
+    }
+
+    func fetchEpisodes(from showId: Int) async throws -> [TVShowEpisode] {
+        do {
+            let endpoint = "shows/\(showId)/episodes"
+            let response: [TVShowEpisode] = try await service.get(endpoint: endpoint)
+            return response
+        } catch (let error) {
+            throw error
+        }
+    }
+
+    func fetchSeasons(from showId: Int) async throws -> [TVShowSeason] {
+        do {
+            let endpoint = "shows/\(showId)/seasons"
+            let response: [TVShowSeason] = try await service.get(endpoint: endpoint)
+            return response
+        } catch (let error) {
+            throw error
+        }
+    }
+
+    func fetchEpisodeBySeason(from seasonId: Int) async throws -> [TVShowEpisode] {
+        do {
+            let endpoint = "seasons/\(seasonId)/episodes"
+            let response: [TVShowEpisode] = try await service.get(endpoint: endpoint)
+            return response
         } catch (let error) {
             throw error
         }

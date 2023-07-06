@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class ShowViewModel: ObservableObject {
     @Published var shows = [TVShow]()
     @Published var isLoading = false
 
+    @Published var homePath = NavigationPath()
+
     private var page = 1
-    let tvShowModel = TVShowModel()
+    lazy var tvShowModel = TVShowModel()
 
     func fetchShows() async {
         guard !isLoading else { return }
@@ -28,6 +31,10 @@ final class ShowViewModel: ObservableObject {
             print(error.localizedDescription)
         }
         setLoadingValue(with: false)
+    }
+
+    func navigateToDetail(show: TVShow) {
+
     }
 
     private func setLoadingValue(with value: Bool) {

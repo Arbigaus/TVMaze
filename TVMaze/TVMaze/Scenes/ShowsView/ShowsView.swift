@@ -19,7 +19,7 @@ struct ShowsView: View {
         NavigationStack {
             List {
                 ForEach(viewModel.shows) { show in
-                    NavigationLink(destination: DetailView(show: show)) {
+                    NavigationLink(value: show) {
                         ShowCard(show: show)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .task {
@@ -44,13 +44,18 @@ struct ShowsView: View {
                 }
             }
             .navigationTitle("TV Shows")
-            .listStyle(PlainListStyle())
-            .listRowSeparator(.hidden)
             .listRowBackground(Color.clear)
             .task {
                 await viewModel.fetchShows()
             }
+            .navigationDestination(for: TVShow.self) { show in
+                detailView(show)
+            }
         }
+    }
+
+    private func detailView(_ show: TVShow) -> DetailView {
+        DetailView(viewModel: DetailViewModel(show: show))
     }
 }
 
