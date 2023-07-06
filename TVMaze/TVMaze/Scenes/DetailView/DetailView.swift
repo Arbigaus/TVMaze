@@ -32,30 +32,34 @@ struct DetailView: View {
             ForEach(viewModel.seasons) { season in
                 Section("Season \(season.number)") {
                     ForEach(season.episodes ?? []) { episode in
-                        Text("Episode \(episode.number ?? 0): \(episode.name)")
-                            .font(.body)
+                        NavigationLink(value: viewModel.updateEpisodeWithShowName(episode)) {
+                            Text("Episode \(episode.number ?? 0): \(episode.name)")
+                                .font(.body)
+                        }
                     }
                 }
                 .padding()
             }
 
-            if viewModel.isLoading {
-                LoadingRow()
-            }
         }
+        .isLoading(viewModel.isLoading)
         .task {
             try? await viewModel.fetchSeasonsList()
+        }
+        .navigationDestination(for: TVShowEpisode.self) { episode in
+            let viewModel = EpisodeViewModel(episode: episode)
+            EpisodeView(viewModel: viewModel)
         }
         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
         .navigationTitle(viewModel.show.name)
         .listRowBackground(Color.clear)
         .frame(maxWidth: .infinity)
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text("Error"),
+                message: Text("An error occurred."),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
 }
-
-//struct DetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailView()
-//    }
-//}
-

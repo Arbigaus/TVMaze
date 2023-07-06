@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TVShowEpisode: Decodable, Identifiable {
+class TVShowEpisode: Decodable, Identifiable {
     let id: Int
     let url: String
     let name: String
@@ -22,6 +22,7 @@ struct TVShowEpisode: Decodable, Identifiable {
     let image: Image?
     let summary: String?
     let links: Links?
+    var showName: String?
 
     struct Rating: Codable {
         let average: Double?
@@ -44,5 +45,25 @@ struct TVShowEpisode: Decodable, Identifiable {
         struct Link: Codable {
             let href: String?
         }
+    }
+}
+
+extension TVShowEpisode: Hashable, Equatable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: TVShowEpisode, rhs: TVShowEpisode) -> Bool {
+        return lhs.id == rhs.id &&
+        lhs.url == rhs.url &&
+        lhs.name == rhs.name &&
+        lhs.season == rhs.season &&
+        lhs.number == rhs.number &&
+        lhs.type == rhs.type &&
+        lhs.airdate == rhs.airdate &&
+        lhs.airtime == rhs.airtime &&
+        lhs.airstamp == rhs.airstamp &&
+        lhs.runtime == rhs.runtime &&
+        lhs.summary == rhs.summary
     }
 }

@@ -35,11 +35,9 @@ struct ShowsView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink {
-                        SearchView()
-
-                    } label: {
+                    NavigationLink(value: isSearchActive) {
                         Image(systemName: "magnifyingglass")
+
                     }
                 }
             }
@@ -50,6 +48,9 @@ struct ShowsView: View {
             }
             .navigationDestination(for: TVShow.self) { show in
                 detailView(show)
+            }
+            .navigationDestination(for: Bool.self) { _ in
+                SearchView()
             }
         }
     }

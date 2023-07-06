@@ -26,6 +26,8 @@
 		D77CD1392A53BADA00A758DE /* TVShowMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77CD1382A53BADA00A758DE /* TVShowMockData.swift */; };
 		D77CD13B2A53BCA200A758DE /* tvShows.json in Sources */ = {isa = PBXBuildFile; fileRef = D77CD1362A53BAC300A758DE /* tvShows.json */; };
 		D7C0CCD12A574BD300D68192 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C0CCD02A574BD200D68192 /* String+Extensions.swift */; };
+		D7C0CCD42A57583500D68192 /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C0CCD32A57583500D68192 /* EpisodeView.swift */; };
+		D7C0CCD62A57584400D68192 /* EpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C0CCD52A57584400D68192 /* EpisodeViewModel.swift */; };
 		D7F1A1D02A54B12500F878F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F1A1CF2A54B12500F878F7 /* Colors.xcassets */; };
 		D7F1A1DC2A54EDF600F878F7 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1DB2A54EDF600F878F7 /* SearchView.swift */; };
 		D7F1A1DE2A54EE3500F878F7 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1A1DD2A54EE3500F878F7 /* SearchViewModel.swift */; };
@@ -77,6 +79,8 @@
 		D77CD1382A53BADA00A758DE /* TVShowMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowMockData.swift; sourceTree = "<group>"; };
 		D77CD13A2A53BBE600A758DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7C0CCD02A574BD200D68192 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D7C0CCD32A57583500D68192 /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		D7C0CCD52A57584400D68192 /* EpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModel.swift; sourceTree = "<group>"; };
 		D7F1A1CF2A54B12500F878F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D7F1A1DB2A54EDF600F878F7 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D7F1A1DD2A54EE3500F878F7 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 		D77CD1272A53B01D00A758DE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D7C0CCD22A57582300D68192 /* EpisodeView */,
 				D7F1A1E32A54F91000F878F7 /* DetailView */,
 				D7F1A1DA2A54EDE200F878F7 /* SearchView */,
 				D7F1A1D92A54EDD600F878F7 /* ShowsView */,
@@ -234,6 +239,15 @@
 				D77CD1362A53BAC300A758DE /* tvShows.json */,
 			);
 			path = Files;
+			sourceTree = "<group>";
+		};
+		D7C0CCD22A57582300D68192 /* EpisodeView */ = {
+			isa = PBXGroup;
+			children = (
+				D7C0CCD32A57583500D68192 /* EpisodeView.swift */,
+				D7C0CCD52A57584400D68192 /* EpisodeViewModel.swift */,
+			);
+			path = EpisodeView;
 			sourceTree = "<group>";
 		};
 		D7F1A1D32A54B3F700F878F7 /* Assets */ = {
@@ -424,12 +438,14 @@
 				D77CD12D2A53B6BE00A758DE /* ShowViewModel.swift in Sources */,
 				D7F1A1DE2A54EE3500F878F7 /* SearchViewModel.swift in Sources */,
 				D7F1A1E52A54F91E00F878F7 /* DetailView.swift in Sources */,
+				D7C0CCD42A57583500D68192 /* EpisodeView.swift in Sources */,
 				D7F1A1DC2A54EDF600F878F7 /* SearchView.swift in Sources */,
 				D77CD1392A53BADA00A758DE /* TVShowMockData.swift in Sources */,
 				D7F1A1E92A5501E300F878F7 /* DetailViewModel.swift in Sources */,
 				D77CD1332A53B7D500A758DE /* ImageView.swift in Sources */,
 				D7F1A1E02A54F51000F878F7 /* TVShowSearch.swift in Sources */,
 				D77CD12B2A53B43500A758DE /* View+Extensions.swift in Sources */,
+				D7C0CCD62A57584400D68192 /* EpisodeViewModel.swift in Sources */,
 				D77CD1242A53AE8200A758DE /* TVShow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

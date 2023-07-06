@@ -16,7 +16,7 @@ struct SearchView: View {
     var body: some View {
         List {
             ForEach(viewModel.shows) { show in
-                NavigationLink(destination: DetailView(viewModel: DetailViewModel(show: show))) {
+                NavigationLink(value: show) {
                     ShowCard(show: show)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -37,6 +37,9 @@ struct SearchView: View {
             }
         }
         .navigationTitle("TV Show Search")
+        .navigationDestination(for: TVShow.self) { show in
+            DetailView(viewModel: DetailViewModel(show: show))
+        }
     }
 }
 

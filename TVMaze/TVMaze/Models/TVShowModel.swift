@@ -57,6 +57,24 @@ final class TVShowModel: TVShowModelProtocol {
         do {
             let endpoint = "shows/\(showId)/seasons"
             let response: [TVShowSeason] = try await service.get(endpoint: endpoint)
+
+            try await withThrowingTaskGroup(of: (TVShowSeason, [TVShowEpisode]).self) { group in
+                for season in response {
+                    group.addTask {
+                        do {
+                            let episodes = try await self.fetchEpisodeBySeason(from: season.id)
+                            return (season, episodes)
+                        } catch (let error) {
+                            throw error
+                        }
+                    }
+                }
+
+                for try await (season, episodes) in group {
+                    season.episodes = episodes
+                }
+            }
+
             return response
         } catch (let error) {
             throw error
@@ -67,6 +85,7 @@ final class TVShowModel: TVShowModelProtocol {
         do {
             let endpoint = "seasons/\(seasonId)/episodes"
             let response: [TVShowEpisode] = try await service.get(endpoint: endpoint)
+            
             return response
         } catch (let error) {
             throw error
